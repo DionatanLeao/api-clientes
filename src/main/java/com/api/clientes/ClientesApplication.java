@@ -11,7 +11,7 @@ import com.api.clientes.repository.ClienteRepository;
 
 @SpringBootApplication
 public class ClientesApplication {
-	
+
 	@Bean
 	public CommandLineRunner run(@Autowired ClienteRepository repository) {
 		return args -> {
@@ -19,7 +19,7 @@ public class ClientesApplication {
 			repository.save(cliente);
 		};
 	}
-	
+
 	public static void main(String[] args) {
 		SpringApplication.run(ClientesApplication.class, args);
 	}
